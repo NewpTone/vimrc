@@ -25,7 +25,8 @@ map <c-h> <c-w>h
 " ====== 自动检测文件类型并加载相应的设置 ======
 syntax on
 filetype plugin indent on
-autocmd FileType python setlocal et sta sw=4 sts=4
+" autocmd FileType python setlocal et sta sw=4 sts=4
+setlocal et sta sw=4 sts=4
 
 " ====== 代码折叠 ======
 autocmd FileType python setlocal foldmethod=indent
@@ -86,3 +87,12 @@ let tagbar_width = 30
 " 打开 NerdTree
 map <silent> <F3> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
+
+"进行版权声明的设置
+""添加或更新头
+map <F2> :call AddTitle()<cr>'s
+function AddTitle()
+    call append(0,"#!/usr/bin/python")
+    call append(1,"# -*- coding: utf-8 -*-")
+    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
+endf
