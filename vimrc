@@ -90,7 +90,7 @@ let NERDTreeIgnore = ['\.pyc$']
 
 "进行版权声明的设置
 ""添加或更新头
-map <F1> :call AddTitle()<cr>'s
+map <F6> :call AddTitle()<cr>'s
 function AddTitle()
     call append(0,"#!/usr/bin/python")
     call append(1,"# -*- coding: utf-8 -*-")
