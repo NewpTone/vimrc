@@ -15,6 +15,7 @@ set number
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 " 编码
 set fileencoding=utf-8
+set encoding=utf-8
 
 " 窗口切换快捷键修改
 map <c-j> <c-w>j
