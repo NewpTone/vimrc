@@ -27,9 +27,17 @@ syntax on
 filetype plugin indent on
 autocmd FileType python setlocal et sta sw=4 sts=4
 autocmd FileType java setlocal et sta sw=4 sts=4
+autocmd FileType php setlocal et sta sw=4 sts=4
+autocmd FileType c setlocal et sta sw=4 sts=4
+autocmd fileType cpp setlocal et sta sw=4 sws=4
 
 " ====== 代码折叠 ======
 autocmd FileType python setlocal foldmethod=indent
+autocmd FileType java setlocal foldmethod=indent
+autocmd FileType php setlocal foldmethod=indent
+autocmd FileType c setlocal foldmethod=indent
+autocmd fileType cpp setlocal foldmethod=indent
+
 " 默认展开所有代码
 set foldlevel=99
 " 空格键作为快捷键
