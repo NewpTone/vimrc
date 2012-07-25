@@ -15,6 +15,8 @@ set number
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
 " 编码
 set fileencoding=utf-8
+" 设置不自动折行
+:set nowrap
 
 " 窗口切换快捷键修改
 map <c-j> <c-w>j
@@ -37,7 +39,6 @@ autocmd FileType java setlocal foldmethod=indent
 autocmd FileType php setlocal foldmethod=indent
 autocmd FileType c setlocal foldmethod=indent
 autocmd fileType cpp setlocal foldmethod=indent
-
 " 默认展开所有代码
 set foldlevel=99
 " 空格键作为快捷键
@@ -85,3 +86,7 @@ function AddTitle()
     call append(1,"# -*- coding: utf-8 -*-")
     echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
 endf
+
+" ====== 对齐线 ======
+let g:indent_guides_guide_size=1  " 宽度
+:set cc=80
