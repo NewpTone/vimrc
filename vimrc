@@ -13,11 +13,18 @@ set showcmd
 set number
 " 为方便复制，用<F2>开启/关闭行号显示:
 nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+" 临时粘贴
+set pastetoggle=<F4>
 " 编码
 set fileencoding=utf-8
 set encoding=utf-8
 " 设置不自动折行
-:set nowrap
+set nowrap
+" 配色方案
+if ! has("gui_running") 
+    set t_Co=256 
+endif 
+colorscheme anotherdark
 
 " 窗口切换快捷键修改
 map <c-j> <c-w>j
@@ -43,7 +50,7 @@ autocmd fileType cpp setlocal foldmethod=indent
 " 默认展开所有代码
 set foldlevel=99
 " 空格键作为快捷键
-:nnoremap <space> za
+nnoremap <space> za
 
 " ====== 代码检查 ======
 " 禁止PyFlakes使用QuickFix，这样在按下<F7>时会调用flake8，而有对于代码编辑时的错误仍能得到有效的提示
@@ -90,4 +97,4 @@ endf
 
 " ====== 对齐线 ======
 let g:indent_guides_guide_size=1  " 宽度
-:set cc=80
+set cc=80
